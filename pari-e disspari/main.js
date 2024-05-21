@@ -4,6 +4,7 @@
 const inputNumber = document.getElementById('number-input')
 const choice = document.getElementById('even-odd-select')
 const subBtn = document.getElementById('sub-btn')
+const msgSection =document.getElementById('msg')
 
 //evento al click
 subBtn.addEventListener('click', function (event){
@@ -21,7 +22,8 @@ subBtn.addEventListener('click', function (event){
     }else if (result===choiceVal){
         msg=`Congratulazioni! Hai vinto ${inputVal*randonNumber*2}€! I numeri erano: ${inputVal} e ${randonNumber}`
     }
-    console.log(msg) //stampo msg in pagina
+        msgSection.innerText=msg  //aggiungo il testo del messaggio al div 'msg' in pagina
+        msgSection.classList.remove('d-none') //rimuovo la classe d-none dal div 'msg'
 })
 
 function evenOrOdd (num1, num2){ //definisco funzione che prende 2 valori come argomenti
@@ -30,4 +32,4 @@ function evenOrOdd (num1, num2){ //definisco funzione che prende 2 valori come a
         return 'even'
     } else {
         return 'odd' //se il modulo della somma dei due argomenti è diverso da 0 ritorna la stringa 'odd'
-}}
+}} 

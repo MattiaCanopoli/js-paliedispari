@@ -12,31 +12,30 @@
     <header class="mt-5">
         <h1 class="text-center">Pari o Dispari?</h1>
     </header>
-    <main class="container">
-        <form>
-            <div class="row justify-content-center py-4">
+    <div class="row justify-content-center mb-4">
+        <div class="col-6">
+            <form>
 
-                <div class="col-12 mb-3">
-                    <label for="number-input" class="form-label">La tua puntata</label>
-                    <input type="number" class="form-control" id="number-input" max="5" min="1" value="1">
-                    <div id="number-help" class="form-text">Inserisci un numero da uno a 5</div>
-                </div>
+                <label for="number-input" class="form-label">La tua puntata</label>
+                <input type="number" class="form-control" id="number-input" max="5" min="1" value="1">
+                <div id="number-help" class="form-text mb-3">Inserisci un numero da uno a 5</div>
 
-                <div class=" col-12 mb-3">
-                    <select class="form-select" aria-label="Default select example" id="even-odd-select">
-                        <option selected value="bet">Punta tutto!</option>
-                        <option value="even">Pari</option>
-                        <option value="odd">Dispari</option>
-                    </select>
-                    <div id="select-help" class="form-text">Scommetti su pari o dispari?</div>
-                </div>
+                <select class="form-select" aria-label="Default select example" id="even-odd-select">
+                    <option selected value="bet">Punta tutto!</option>
+                    <option value="even">Pari</option>
+                    <option value="odd">Dispari</option>
+                </select>
+                <div id="select-help" class="form-text mb-3">Scommetti su pari o dispari?</div>
 
-                <div>
-                    <button type="submit" class="btn btn-primary" id="sub-btn">Scommetti!</button>
-                </div>
-            </div>
-        </form>
-    </main>
+                <button type="submit" class="btn btn-primary" id="sub-btn">Scommetti!</button>
+            </form>
+        </div>
+        </div>
+    <div class="row justify-content-center">
+        <div class="col-6 text-center fs-4">
+            <div class="d-none" id="msg"></div>
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
 
