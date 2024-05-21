@@ -34,4 +34,23 @@ if (inputWord.length > 1){
 console.log(outputString)
 
 
+/*SOLUZIONE GAETANO
+-nella funzione inserire solo la verifica delle parole, passandole entrambe come argomenti
+-trasforma stringa in array con split
+-fa reverse dell'array
+-joina la stringa
+---parola.split('').reverse().join('')
+-la funzione restituisce solo true o false
+-per l'output: if (funzione(parola, parolaReverse))
+*/
 
+
+/*SOLUZIONE 2
+al posto di usare i metodi built-it, usare ciclo for. non usare array, ma concatenare le varie lettere in una nuova stringa
+*/
+
+
+/*APPUNTI DI MIGLIORAMENTO:
+-spostare .toLowerCase nella funzione
+-gestire i casi limite prima di entrare effettivamente nella funzione
+*/
