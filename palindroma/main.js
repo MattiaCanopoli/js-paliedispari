@@ -3,38 +3,35 @@
 //richiedo parola in input. "ripulisco" la stringa da tutti gli spazi (esterni e interni) e la converto in  minuscolo
 const inputWord = prompt('inserisci una parola')
 
-function reverseWord(word) { //definisco una fuzione che richiede il parametro word
+let outputString = 'la parola inserita non è palindroma' //definisco una variabile stringa che sarà stampata in console. il valore di default è per parole non palindrome
 
-    word.toLowerCase() //converto tutti i caratteri in minuscolo
-
-    let revWord = '' //creo un array vuoto per contenere le singole lettere della stringa in input, passata come argomento alla funzione
-
-    for (let i = word.length - 1; i >= 0; i--) { //apro un ciclo che inizia da i = lunghezza della parola -1 e finisce quando l'indice arriva 0
-        revWord += word[i]
-    }
-
-    let result //definisco una variabile result che conterrà il risultato della funzione
-
-    if (inputWord === revWord) { //verifico che la parola in input sia uguale all'array joinato in una stringa, ovvero alla stringa in input letta da destra a sinistra
-        result = true
-    } else {
-        result = false
-    }
-    return result
-}
-
-let outputString = 'la parola inserita non è palindroma'
-
-if (inputWord.length === 0) {
+if (inputWord.length === 0) { //verifico che l'utente abbia effettivamente dato un input
     outputString = 'non hai inserito nulla!'
-} else if (inputWord.length === 1) {
+} else if (inputWord.length === 1) { //verifico che l'input abbia almeno 2 caratteri
     outputString = 'la parola inserita è troppo corta'
 } else if (reverseWord(inputWord)) {
     outputString = 'la parola inserita è palindorma'
 }
 
+function reverseWord(word) { //definisco una fuzione che richiede il parametro word
 
-console.log(outputString)
+    word.toLowerCase() //converto tutti i caratteri in minuscolo
+
+    let revWord = '' //creo una variabile vuota per contenere la nuova stringa
+
+    for (let i = word.length - 1; i >= 0; i--) { //apro un ciclo che inizia da i = lunghezza della parola -1 e finisce quando l'indice arriva 0
+        revWord += word[i] //concateno la lettera all'indice i alla stringa revWord
+    }
+
+    let result = false //definisco una variabile result che conterrà il risultato della funzione. il default è false
+
+    if (inputWord === revWord) { //se inputWord e revWord sono uguali, il valore di result diventa true
+        result = true
+    }
+    return result //la funzione ritorna un valore booleano
+}
+
+console.log(outputString) //stampo in console la stringa
 
 
 /*SOLUZIONE GAETANO
